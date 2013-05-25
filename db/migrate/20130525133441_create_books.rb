@@ -5,8 +5,8 @@ class CreateBooks < ActiveRecord::Migration
       t.string :description
       t.string :isbn
       t.string :lang
-      t.string :page_count
-      t.string :published_in
+      t.integer :page_count
+      t.date :published_in
       t.string :published_by
 
       t.timestamps
