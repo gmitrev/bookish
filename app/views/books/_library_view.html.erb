@@ -1,0 +1,11 @@
+<div class="row-fluid">
+  <div class="span-11">
+    <% @books.each do |book| %>
+      <a href="<%= book_path(book) %>" class="span2 library-book" style="text-align: center">
+        <%= image_tag "/covers/#{book.isbn}.jpg", size: '146x226', class: "cover" %>
+        <br />
+          <%= book.title %>
+      </a>
+    <% end %>
+  </div>
+</div>

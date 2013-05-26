@@ -2,6 +2,9 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
+    if params[:view].present? && session[:book_view] != params[:view]
+      session[:book_view] = params[:view]
+    end
     @books = Book.all
 
     respond_to do |format|
