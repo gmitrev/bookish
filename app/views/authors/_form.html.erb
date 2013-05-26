@@ -14,13 +14,13 @@
   <div class="control-group">
     <%= f.label :born, :class => 'control-label' %>
     <div class="controls">
-      <%= f.date_select :born, :class => 'date_select', use_short_month: true, start_year: 1900 %>
+      <%= f.date_select :born, :class => 'date_select', use_short_month: true, start_year: 1900, include_blank: true %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :died, :class => 'control-label' %>
     <div class="controls">
-      <%= f.date_select :died, :class => 'date_select', use_short_month: true, start_year: 1900 %>
+      <%= f.date_select :died, :class => 'date_select', use_short_month: true, start_year: 1900, include_blank: true %>
     </div>
   </div>
 

@@ -23,7 +23,11 @@ div.page-header{
   border-bottom: 1px solid #eee;
   border-top: 1px solid #eee;
 
-  a {
+  .author{
+    font-size: 18px;
+  }
+
+  .submenu a {
     position: relative;
     top: 30px;
   }

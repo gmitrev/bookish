@@ -1,13 +1,15 @@
 <%- model_class = Book -%>
 <div class='page-header'>
   <h1><%= @book.title %></h1>
-  by David Foster Wallace
+  <span class='author'>
+    by <%= link_to @book.authors.first.name, author_path(@book.authors.first) %>
+  </span>
 </div>
 <div class="row-fluid">
   <div class="span2">
     <%= image_tag "/covers/#{@book.isbn}.jpg", size: '146x226' %>
-      <a class="btn btn-success btn-small" style="width: 122px; margin-top: 10px;" href="#">Want</a>
-      <a class="btn btn-warning btn-small" style="width: 122px; margin-top: 5px" href="#">Have</a>
+      <a class="btn btn-success btn-small span" style="margin-top: 10px;" href="#">Want</a>
+      <a class="btn btn-warning btn-small span" style="margin-top: 5px" href="#">Have</a>
   </div>
   <div class="span9">
         <p>

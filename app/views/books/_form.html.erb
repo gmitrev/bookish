@@ -6,6 +6,14 @@
     </div>
   </div>
   <div class="control-group">
+    <%= f.label :author, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :author, Author.all.map{ |a| [a.name, a.id] }, :class => 'text_field span10' %>
+      &nbsp;
+      <%= link_to 'Add', new_author_path, target: '_blank' %>
+    </div>
+  </div>
+  <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_area :description, rows: 5, :class => 'text_field span10' %>
